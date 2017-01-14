@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="3.0" xmlns="http://java.sun.com/xml/ns/javaee"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee 
+	http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd">
+	<display-name></display-name>
+	<welcome-file-list>
+		<welcome-file>index.jsp</welcome-file>
+	</welcome-file-list>
+
+	<servlet>
+		<servlet-name>superLoginServlet</servlet-name>
+		<servlet-class>com.panting.user.control.SuperLoginServlet</servlet-class>
+	</servlet>
+
+	<servlet>
+		<servlet-name>loginServlet</servlet-name>
+		<servlet-class>com.panting.user.control.LoginServlet</servlet-class>
+	</servlet>
+
+
+	<servlet>
+		<servlet-name>registerServlet</servlet-name>
+		<servlet-class>com.panting.user.control.RegisterServlet</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>CheckCodeServlet</servlet-name>
+		<servlet-class>com.panting.user.control.CheckCodeServlet</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>ResetPwdServlet</servlet-name>
+		<servlet-class>com.panting.user.control.ResetPwdServlet</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>superLoginServlet</servlet-name>
+		<url-pattern>/superLoginServlet</url-pattern>
+	</servlet-mapping>
+	
+	<servlet-mapping>
+		<servlet-name>loginServlet</servlet-name>
+		<url-pattern>/loginServlet</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>registerServlet</servlet-name>
+		<url-pattern>/registerServlet</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>CheckCodeServlet</servlet-name>
+		<url-pattern>/checkCodeServlet</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>ResetPwdServlet</servlet-name>
+		<url-pattern>/resetPwdServlet</url-pattern>
+	</servlet-mapping>
+</web-app>
