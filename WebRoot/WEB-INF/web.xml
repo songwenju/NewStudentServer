@@ -36,7 +36,7 @@
 		<servlet-name>superLoginServlet</servlet-name>
 		<url-pattern>/superLoginServlet</url-pattern>
 	</servlet-mapping>
-	
+
 	<servlet-mapping>
 		<servlet-name>loginServlet</servlet-name>
 		<url-pattern>/loginServlet</url-pattern>
@@ -53,4 +53,15 @@
 		<servlet-name>ResetPwdServlet</servlet-name>
 		<url-pattern>/resetPwdServlet</url-pattern>
 	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>superLoginOutServlet</servlet-name>
+		<servlet-class>com.panting.user.control.SuperLoginOutServlet</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>superLoginOutServlet</servlet-name>
+		<url-pattern>/superLoginOutServlet</url-pattern>
+	</servlet-mapping>
+
 </web-app>

@@ -24,9 +24,7 @@
                     <i class="icon-chevron-down glyph-icon"></i>
                 </a>
                 <ul class="dropdown-menu-uu" style="display: none" id="ad_setting_ul">
-                    <li class="ad_setting_ul_li"> <a href="javascript:;"><i class="icon-user glyph-icon"></i> 个人中心 </a> </li>
-                    <li class="ad_setting_ul_li"> <a href="javascript:;"><i class="icon-cog glyph-icon"></i> 设置 </a> </li>
-                    <li class="ad_setting_ul_li"> <a href="javascript:;"><i class="icon-signout glyph-icon"></i> <span class="font-bold">退出</span> </a> </li>
+                    <li class="ad_setting_ul_li"> <a href="/NewStudentServer/superLoginOutServlet"><i class="icon-signout glyph-icon"></i> <span class="font-bold">退出</span> </a> </li>
                 </ul>
             </div>
     </div>
@@ -35,26 +33,33 @@
     <div class="layout_left_menu">
         <ul id="menu">
             <li class="childUlLi">
-               <a href="main.html"  target="menuFrame"><i class="glyph-icon icon-home"></i>首页</a>
+               <a href="main.html"  target="menuFrame"><i class="glyph-icon icon-home"></i>主页</a>
                 <ul>
-                    <li><a href="user_add.html" target="menuFrame"><i class="glyph-icon icon-chevron-right"></i>用户添加</a></li>
+                    <li><a href="./confirm.jsp" target="menuFrame"><i class="glyph-icon icon-chevron-right"></i>确认报到</a></li>
                 </ul>
             </li>
             <li class="childUlLi">
-                <a href="user.html"  target="menuFrame"> <i class="glyph-icon icon-reorder"></i>成员管理</a>
+                <a href="user.html"  target="menuFrame"> <i class="glyph-icon icon-reorder"></i>信息录入</a>
                 <ul>
-                    <li><a href="#"><i class="glyph-icon icon-chevron-right"></i>学生管理</a></li>
-                    <li><a href="#"><i class="glyph-icon icon-chevron-right"></i>报到学生管理</a></li>
-                    <li><a href="#"><i class="glyph-icon icon-chevron-right"></i>未报到学生管理</a></li>
-                    <li><a href="#"><i class="glyph-icon icon-chevron-right"></i>班主任管理</a></li>
+                    <li><a href="./stuAdd.jsp" target="menuFrame"><i class="glyph-icon icon-chevron-right"></i>学生信息录入</a></li>
+                    <li><a href="./teacherAdd.jsp" target="menuFrame"><i class="glyph-icon icon-chevron-right"></i>班主任信息录入</a></li>
+                </ul>
+            </li>
+            
+            <li class="childUlLi">
+                <a href="user.html"  target="menuFrame"> <i class="glyph-icon icon-reorder"></i>信息管理</a>
+                <ul>
+                    <li><a href="./allStuInfo.jsp" target="menuFrame"><i class="glyph-icon icon-chevron-right"></i>全部学生信息</a></li>
+                    <li><a href="./confirmStuInfo.jsp" target="menuFrame"><i class="glyph-icon icon-chevron-right"></i>报到学生信息</a></li>
+                    <li><a href="./unConfirmStuInfo.jsp" target="menuFrame"><i class="glyph-icon icon-chevron-right"></i>未报到学生信息</a></li>
+                    <li><a href="./teacherInfo.jsp" target="menuFrame"><i class="glyph-icon icon-chevron-right"></i>班主任信息</a></li>
                 </ul>
             </li>
             <li class="childUlLi">
                 <a href="role.html" target="menuFrame"> <i class="glyph-icon icon-reorder"></i>角色管理</a>
                 <ul>
-                    <li><a href="#"><i class="glyph-icon icon-chevron-right"></i>修改密码</a></li>
-                     <li><a href="#"><i class="glyph-icon icon-chevron-right"></i>添加管理员</a></li>
-                    <li><a href="#"><i class="glyph-icon icon-chevron-right"></i>帮助</a></li>
+                    <li><a href="./resetPwd.jsp" target="menuFrame"><i class="glyph-icon icon-chevron-right"></i>修改密码</a></li>
+                     <li><a href="./adminAdd.jsp" target="menuFrame"><i class="glyph-icon icon-chevron-right"></i>添加管理员</a></li>
                 </ul>
             </li>
            
@@ -64,12 +69,12 @@
     <div id="layout_right_content" class="layout_right_content">
 
         <div class="route_bg">
-            <a href="#">主页</a><i class="glyph-icon icon-chevron-right"></i>
-            <a href="#">菜单管理</a>
+            <a href="./home.jsp">主页</a><i class="glyph-icon icon-chevron-right"></i>
+            <a href="#">信息确认</a>
         </div>
         <div class="mian_content">
             <div id="page_content">
-                <iframe id="menuFrame" name="menuFrame" src="./main.html" style="overflow:visible;"
+                <iframe id="menuFrame" name="menuFrame" src="./stuAdd.jsp" style="overflow:visible;"
                         scrolling="yes" frameborder="no" width="100%" height="100%"></iframe>
             </div>
         </div>
