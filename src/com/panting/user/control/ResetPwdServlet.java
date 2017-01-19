@@ -7,9 +7,9 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import com.panting.user.dao.UserDao;
-import com.panting.user.dao.impls.UserImpls;
-import com.panting.user.domain.User;
+import com.panting.user.dao.StudentDao;
+import com.panting.user.dao.impls.StudentImpls;
+import com.panting.user.domain.Student;
 
 public class ResetPwdServlet extends HttpServlet {
 
@@ -26,15 +26,15 @@ public class ResetPwdServlet extends HttpServlet {
 	public void doPost(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 		response.setContentType("text/html;charset=utf-8");
-		String email= request.getParameter("email");
+		int stuNum= Integer.parseInt(request.getParameter("stuNum"));
 		String userPassword = request.getParameter("userPassword");
-		UserDao userDao = new UserImpls();
-		User user = userDao.getDbUser(email);
+		StudentDao studentDao = new StudentImpls();
+		Student user = studentDao.getDbStudent(stuNum);
 		if (user == null) {
 			System.out.println("用户不存在");
 			response.getOutputStream().write("1".getBytes("UTF-8"));
 		}else {
-			int result = userDao.resetPassword(email, userPassword);
+			int result = studentDao.resetPassword(stuNum, userPassword);
 			if (result == 1) {
 				System.out.println("更新成功");
 				response.getOutputStream().write("2".getBytes("UTF-8"));

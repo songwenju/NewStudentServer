@@ -42,6 +42,7 @@ public class SuperLoginServlet extends HttpServlet {
 				request.setAttribute("message", result);
 				request.getSession().setAttribute("user",
 						new SuperUser(loginName, loginPwd));
+				
 				response.sendRedirect("pages/superUser/home.jsp");
 			} else {
 				result = "密码错误";

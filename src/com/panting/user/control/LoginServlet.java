@@ -7,8 +7,8 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import com.panting.user.dao.impls.UserImpls;
-import com.panting.user.domain.User;
+import com.panting.user.dao.impls.StudentImpls;
+import com.panting.user.domain.Student;
 
 /**
  * 用户登录业务逻辑类
@@ -20,18 +20,19 @@ public class LoginServlet extends HttpServlet {
 
 	public void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
+		request.getSession().setMaxInactiveInterval(-1); 
 		response.setContentType("text/html;charset=utf-8");
-		String loginUser= request.getParameter("loginUser");
+		int stuNum= Integer.parseInt(request.getParameter("stuNum"));
 		//request.getSession().setAttribute("userName", loginUser);
 		String loginPwd = request.getParameter("loginPwd");
-		System.out.println("loginUser:"+loginUser +" loginPwd:"+loginPwd);
-		UserImpls impls = new UserImpls();
-		User dbUser = impls.getDbUser(loginUser);
-		if (dbUser == null) {
+//		System.out.println("loginUser:"+loginUser +" loginPwd:"+loginPwd);
+		StudentImpls impls = new StudentImpls();
+		Student dbStudent = impls.getDbStudent(stuNum);
+		if (dbStudent == null) {
 			System.out.println("用户不存在");
 			response.getOutputStream().write("1".getBytes("UTF-8"));
 		}else {
-			if (dbUser.getPassword().equals(loginPwd)) {
+			if (dbStudent.getPwd().equals(loginPwd)) {
 				System.out.println("登录成功");
 				response.getOutputStream().write("2".getBytes("UTF-8"));
 			}else {
@@ -39,7 +40,6 @@ public class LoginServlet extends HttpServlet {
 				response.getOutputStream().write("3".getBytes("UTF-8"));
 			}
 		}	
-		
 	}
 		
 	public void doPost(HttpServletRequest request, HttpServletResponse response)

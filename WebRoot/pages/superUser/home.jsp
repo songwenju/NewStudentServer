@@ -11,7 +11,12 @@
 <script type="text/javascript" src="./js/jquery.min.js"></script>
 <script type="text/javascript" src="./js/tendina.min.js"></script>
 <script type="text/javascript" src="./js/common.js"></script>
-
+<!-- frame跳转到最外层 -->
+<script type="text/javascript">
+if (top.location != location){
+ top.location.href = location.href;
+ }
+</script>
 </head>
 <body>
     <!--顶部-->
@@ -41,8 +46,8 @@
             <li class="childUlLi">
                 <a href="user.html"  target="menuFrame"> <i class="glyph-icon icon-reorder"></i>信息录入</a>
                 <ul>
-                    <li><a href="./stuAdd.jsp" target="menuFrame"><i class="glyph-icon icon-chevron-right"></i>学生信息录入</a></li>
                     <li><a href="./teacherAdd.jsp" target="menuFrame"><i class="glyph-icon icon-chevron-right"></i>班主任信息录入</a></li>
+                    <li><a href="./stuAdd.jsp" target="menuFrame"><i class="glyph-icon icon-chevron-right"></i>学生信息录入</a></li>
                 </ul>
             </li>
             
@@ -68,13 +73,9 @@
     <!--菜单-->
     <div id="layout_right_content" class="layout_right_content">
 
-        <div class="route_bg">
-            <a href="./home.jsp">主页</a><i class="glyph-icon icon-chevron-right"></i>
-            <a href="#">信息确认</a>
-        </div>
         <div class="mian_content">
             <div id="page_content">
-                <iframe id="menuFrame" name="menuFrame" src="./stuAdd.jsp" style="overflow:visible;"
+                <iframe id="menuFrame" name="menuFrame" src="./confirm.jsp" style="overflow:visible;"
                         scrolling="yes" frameborder="no" width="100%" height="100%"></iframe>
             </div>
         </div>

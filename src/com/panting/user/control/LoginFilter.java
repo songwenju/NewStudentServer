@@ -44,10 +44,11 @@ public class LoginFilter implements Filter {
 		if (!("/pages/superUser/login.jsp".equals(targetURL))) {
 			
 			// 在不为登陆页面时，再进行判断，如果不是登陆页面也没有session则跳转到登录页面，
-			SuperUser superUser =(SuperUser) session.getAttribute("user");
-			if ( superUser == null 
-					|| superUser.getUserName().equals("")) {
-				System.out.println(" superUser == null :"+ superUser == null);
+			System.out.println("session is null:"+(session == null));
+			//System.out.println("user is null:"+(session.getAttribute("user") == null));
+			if ( session == null || session.getAttribute("user") == null 
+					|| ((SuperUser)session.getAttribute("user")).getUserName().equals("")) {
+//				System.out.println(" superUser == null :"+ session.getAttribute("user") == null);
 				response.sendRedirect(login_page);
 				return;
 			} else {

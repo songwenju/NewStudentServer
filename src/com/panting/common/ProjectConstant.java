@@ -18,34 +18,38 @@ public class ProjectConstant {
 	public static final String EMAIL_FINDPWD_TEXT = "亲爱的用户：您好！您此次重置密码的验证码如下，如非本人操作，请忽略此文件</ br>";
 	public static final String EMAIL_FINDPWD_TITLE = "随手涂鸦:找回密码校验码";
 	public static final String EMAIL_PORT = "smtp.163.com";// 或smtp.qq.com
-	
+
 	// 数据库相关
 
 	// 远程数据库的相关
 	public static final String REMOTE_DB_URL = "jdbc:mysql://27.54.227.50:3306/bike";
 	public static final String REMOTE_DB_USER_NAME = "bike";
 	public static final String REMOTE_DB_PASSWORD = "swj123";
-	public static final String REMOTE_USER_TABLE = "newstu_student";
 	public static final String REMOTE_SUPER_USER_TABLE = "newstu_superuser";
 
 	// 本地数据库的相关
 	public static final String LOCAL_DB_URL = "jdbc:mysql://localhost:3306/newstudent";
 	public static final String LOCAL_DB_USER_NAME = "root";
 	public static final String LOCAL_DB_PASSWORD = "admin";
-	public static final String LOCAL_USER_TABLE = "newstu_student";
-	public static final String LOCAL_SUPER_USER_TABLE = "newstu_superuser";
 
+	public static final String LOCAL_SUPER_USER_TABLE = "newstu_superuser";
 
 	// 加载驱动
 	public static final String DB_DRIVER = "com.mysql.jdbc.Driver";
-	// 数据库的链接
+	
+	// 本地数据库连接
 	public static final String DB_URL = LOCAL_DB_URL;
-	// 数据库用户名
 	public static final String DB_USER_NAME = LOCAL_DB_USER_NAME;
-	// 数据库password
 	public static final String DB_PASSWORD = LOCAL_DB_PASSWORD;
-	// 数据库表名
-	public static final String USER_TABLE = LOCAL_USER_TABLE;
+	public static final String STUDENT_TABLE = "newstu_student";
+	public static final String TEACHER_TABLE = "newstu_headmaster";
 	public static final String SUPER_USER_TABLE = LOCAL_SUPER_USER_TABLE;
+
+	// 远程数据库连接
+//	public static final String DB_URL = REMOTE_DB_URL;
+//	public static final String DB_USER_NAME = REMOTE_DB_USER_NAME;
+//	public static final String DB_PASSWORD = REMOTE_DB_PASSWORD;
+//	public static final String USER_TABLE = REMOTE_USER_TABLE;
+//	public static final String SUPER_USER_TABLE = REMOTE_SUPER_USER_TABLE;
 
 }

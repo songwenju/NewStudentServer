@@ -1,0 +1,32 @@
+.container {
+	height: 430px;
+}
+
+.img {
+	width: 400px;
+	height: 300px
+}
+
+.form-horizontal {
+	height: 300px;
+}
+
+.login {
+	margin-top: 25px
+}
+
+.btn {
+	width: 252px;
+	height: 50px;
+}
+
+#msg {
+	color: #CC0001
+}
+
+.col-center-block {
+	float: none;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}

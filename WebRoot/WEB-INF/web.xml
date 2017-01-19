@@ -7,7 +7,6 @@
 	<welcome-file-list>
 		<welcome-file>index.jsp</welcome-file>
 	</welcome-file-list>
-
 	<servlet>
 		<servlet-name>superLoginServlet</servlet-name>
 		<servlet-class>com.panting.user.control.SuperLoginServlet</servlet-class>
@@ -19,14 +18,6 @@
 	</servlet>
 
 
-	<servlet>
-		<servlet-name>registerServlet</servlet-name>
-		<servlet-class>com.panting.user.control.RegisterServlet</servlet-class>
-	</servlet>
-	<servlet>
-		<servlet-name>CheckCodeServlet</servlet-name>
-		<servlet-class>com.panting.user.control.CheckCodeServlet</servlet-class>
-	</servlet>
 	<servlet>
 		<servlet-name>ResetPwdServlet</servlet-name>
 		<servlet-class>com.panting.user.control.ResetPwdServlet</servlet-class>
@@ -41,14 +32,7 @@
 		<servlet-name>loginServlet</servlet-name>
 		<url-pattern>/loginServlet</url-pattern>
 	</servlet-mapping>
-	<servlet-mapping>
-		<servlet-name>registerServlet</servlet-name>
-		<url-pattern>/registerServlet</url-pattern>
-	</servlet-mapping>
-	<servlet-mapping>
-		<servlet-name>CheckCodeServlet</servlet-name>
-		<url-pattern>/checkCodeServlet</url-pattern>
-	</servlet-mapping>
+
 	<servlet-mapping>
 		<servlet-name>ResetPwdServlet</servlet-name>
 		<url-pattern>/resetPwdServlet</url-pattern>
@@ -63,7 +47,26 @@
 		<servlet-name>superLoginOutServlet</servlet-name>
 		<url-pattern>/superLoginOutServlet</url-pattern>
 	</servlet-mapping>
-	
+
+	<servlet>
+		<servlet-name>stuAddServlet</servlet-name>
+		<servlet-class>com.panting.user.control.StuAddServlet</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>stuAddServlet</servlet-name>
+		<url-pattern>/stuAddServlet</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<servlet-name>teacherAddServlet</servlet-name>
+		<servlet-class>com.panting.user.control.TeacherAddServlet</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>teacherAddServlet</servlet-name>
+		<url-pattern>/teacherAddServlet</url-pattern>
+	</servlet-mapping>
+
 	<!-- 配置登陆过滤器 -->
 	<filter>
 		<filter-name>LoginFilter</filter-name>
